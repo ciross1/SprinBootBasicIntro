@@ -1,0 +1,16 @@
+link of the full video:
+https://www.youtube.com/watch?v=2R6jw_LJbeY&list=PLhPyEFL5u-i0MHw41OapxjLlsl0s2XQyE&index=16
+
+In the thymeleaf form in the newOrderForm, the form is going to have a post method and it is going to expect an object
+so th:object="${order}"    it means what kind of objet is going to be filling in the form
+
+Advice:
+Use ${...} when reading values directly from the context or loop.
+
+Use *{...} when inside th:object and working with forms.
+
+In the first page we did in this lesson, addNewOrderForm, just write all the fields from orderModel with inputs
+then then the th:action is going to be /orders/addNew
+
+then, we will also create another html file called searchForm, for this one the object is going to be a searchModel and
+for that we have to create a new class/model

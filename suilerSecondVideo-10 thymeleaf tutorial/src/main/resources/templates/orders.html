@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html
+     lang="en"
+     xmlns:th="http://www.w3.org/1999/xhtml"
+     layout:decorate="~{layouts/defaultLayout}"
+     xmlns:layout="http://www.w3.org/1999/xhtml"
+>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+</head>
+<body>
+<div layout:fragment="content">
+<h2 th:text="${title}"></h2>
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th scope="col">id</th>
+    <th scope="col">OrderNumber</th>
+    <th scope="col">Name</th>
+    <th scope="col">Price</th>
+    <th scope="col">Qty</th>
+  </tr>
+  </thead>
+  <tbody>
+  
+  <!--
+  1. insert title
+  2.insert table orders
+  3. add to defaultLayout
+  -->
+  
+  
+  <tr th:each="order : ${orders}">
+    <td th:text="${order.id}"></td>
+    <td th:text="${order.orderNumber}">Mark</td>
+    <td th:text="${order.productName}">Otto</td>
+    <td th:text="${order.price}">@mdo</td>
+    <td th:text="${order.quantity}">Something</td>
+  </tr>
+ 
+  </tbody>
+</table>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+</div>
+</body>
+</html>

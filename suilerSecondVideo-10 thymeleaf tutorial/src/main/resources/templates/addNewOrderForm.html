@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html
+		 lang="en"
+		 xmlns:th="http://www.w3.org/1999/xhtml"
+		 layout:decorate="~{layouts/defaultLayout}"
+		 xmlns:layout="http://www.w3.org/1999/xhtml"
+>
+<head >
+	 <meta charset="UTF-8">
+	 <title >Title</title >
+</head >
+<body >
+<div layout:fragment="content">
+	 <div class="container mt-3 mb-3">
+	 <form th:action ="@{/orders/addNew} "method="post", th:object="${order}">
+			<div class="mb-3">
+				 <label for="orderNumberInput" class="form-label">Order Number</label>
+				 <input th:field="*{orderNumber}" type="text" class="form-control" id="orderNumberInput" aria-describedby="orderHelp">
+				 <div id="orderHelp" class="form-text">Invent a number for this order</div>
+			</div>
+			<div class="mb-3">
+				 <label for="orderNameInput" class="form-label">Order Name</label>
+				 <input  th:field="*{productName}" type="text" class="form-control" id="orderNameInput" aria-describedby="orderNameHelp">
+				 <div id="orderNameHelp" class="form-text">Invent a name for this order</div>
+			</div>
+			<div class="mb-3">
+				 <label for="orderPriceInput" class="form-label">Order Price</label>
+				 <input  th:field="*{price}" type="text" class="form-control" id="orderPriceInput" aria-describedby="orderPriceHelp">
+				 <div id="orderPriceHelp" class="form-text">Invent a price for this order</div>
+			</div>
+			<div class="mb-3">
+				 <label for="orderQtyInput" class="form-label">Order Quantity</label>
+				 <input  th:field="*{quantity}" type="text" class="form-control" id="orderQtyInput" aria-describedby="orderHelp">
+				 <div id="orderQtyHelp" class="form-text">Invent a quantity for this order</div>
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+	 </form>
+	 </div>
+</div>
+</body >
+</html >

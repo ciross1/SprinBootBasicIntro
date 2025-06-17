@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://yhymleaf.org">
+<head>
+
+			<style>
+						*{
+						font-family: Arial, Helvetica, sans-serif;
+						}
+						h1{
+						color: blue;
+						}
+						p{
+						font-style: italic;
+						}
+						.title_box{
+						border: 2px solid #222;
+						border-radius: 5px;
+						width: fit-content;
+						padding: 0.5em;
+						}
+			</style>
+
+
+</head>
+<body>
+<div class="title_box">
+			<h1 th:text = "${message}">Hello Worldddd</h1>
+			<h2 th:text = "${rating}">This is a rating</h2>
+			<h3 th:text = ${report}>This is a report</h3>
+</div>
+<p>This is looking perfect</p>
+<p th:text ="${message2}">This is made with ModelAndView</p>
+<p th:text = "${message3}">This is made with ModelAndView</p>
+</body>
+</html>

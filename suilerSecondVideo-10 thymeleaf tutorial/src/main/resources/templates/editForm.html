@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html
+     lang="en"
+     xmlns:th="http://www.w3.org/1999/xhtml"
+     layout:decorate="~{layouts/defaultLayout}"
+     xmlns:layout="http://www.w3.org/1999/xhtml"
+>
+<head >
+  <meta charset="UTF-8">
+  <title ></title >
+</head >
+<body >
+<div layout:fragment="content">
+  <div class="container mt-3 mb-3">
+    <h2 th:text="${title}">titleee</h2>
+    <form th:action ="@{/orders/doUpdate} "method="post", th:object="${orderModel}">
+      <input type="hidden" th:field="${orderModel.id}">
+      
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="OrderNumber">Order Number</span>
+        <input type="text" th:field="*{orderNumber}" class="form-control" aria-describedby="inputHelp" />
+        <div class="fieldError">
+          <p th:if="${#fields.hasErrors('orderNumber')}" th:errors="*{orderNumber}">Order Number Error</p>
+        </div>
+      </div>
+      
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="productName">Product name</span>
+        <input type="text" th:field="*{productName}" class="form-control" aria-describedby="inputHelp" />
+        <div class="fieldError">
+          <p th:if="${#fields.hasErrors('productName')}" th:errors="*{productName}">Product Name Error</p>
+        </div>
+      </div>
+      
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="price">Price</span>
+        <input type="text" th:field="*{price}" class="form-control" aria-describedby="inputHelp" />
+        <div class="fieldError">
+          <p th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Price Error</p>
+        </div>
+      </div>
+      
+      <div class="input-group input-group-lg">
+        <span class="input-group-text" id="quantity">Quantity</span>
+        <input type="text" th:field="*{quantity}" class="form-control" aria-describedby="inputHelp" />
+        <div class="fieldError">
+          <p th:if="${#fields.hasErrors('quantity')}" th:errors="*{quantity}">Quantity Error</p>
+        </div>
+      </div>
+      
+      
+      <button type="submit" class="btn btn-primary">Update</button>
+    </form>
+  </div>
+</div>
+</body >
+</html >

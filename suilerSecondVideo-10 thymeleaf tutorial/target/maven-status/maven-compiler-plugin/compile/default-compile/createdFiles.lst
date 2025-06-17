@@ -1,0 +1,12 @@
+com\sluiters\second\video\suilerSecondVideo\models\OrderEntity.class
+com\sluiters\second\video\suilerSecondVideo\models\OrderModel.class
+com\sluiters\second\video\suilerSecondVideo\SuilerSecondVideoApplication.class
+com\sluiters\second\video\suilerSecondVideo\data\OrdersDataAccessInterface.class
+com\sluiters\second\video\suilerSecondVideo\data\OrdersRepositoryInterface.class
+com\sluiters\second\video\suilerSecondVideo\services\OrdersBusinessService.class
+com\sluiters\second\video\suilerSecondVideo\models\SearchModel.class
+com\sluiters\second\video\suilerSecondVideo\controllers\OrderRestController.class
+com\sluiters\second\video\suilerSecondVideo\data\OrdersDataServiceForRepository.class
+com\sluiters\second\video\suilerSecondVideo\controllers\OrderController.class
+com\sluiters\second\video\suilerSecondVideo\SpringConfig.class
+com\sluiters\second\video\suilerSecondVideo\services\OrdersBusinessServiceInterface.class
